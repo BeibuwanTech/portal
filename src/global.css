@@ -1,0 +1,13 @@
+html {
+  overflow-y: scroll;
+  background-color: #eef6fb;
+}
+
+body {
+  background-color: #eef6fb;
+}
+
+#root {
+  margin: 0 auto;
+  min-width: 1220px;
+}
