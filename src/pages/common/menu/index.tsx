@@ -7,6 +7,7 @@ import {
   StarFilled,
   TrademarkCircleFilled,
   PayCircleFilled,
+  PieChartFilled,
 } from '@ant-design/icons';
 import './index.less';
 
@@ -49,6 +50,12 @@ const Menu: React.FC = () => {
             <a href="/html/jgcx/">
               <PayCircleFilled className="menu-icon" />
               科技金融
+            </a>
+          </div>
+          <div className="menu-item">
+            <a href="/html/bigdata/">
+              <PieChartFilled className="menu-icon" />
+              科服大数据
             </a>
           </div>
         </div>

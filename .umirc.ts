@@ -6,7 +6,9 @@ export default defineConfig({
     type: 'none',
   },
   routes: [
-    { path: '/', component: '@/pages/index' },
+    { path: '/', component: '@/pages/index/portal' },
+    { path: '/digital', component: '@/pages/index/digital' },
+    { path: '/activity', component: '@/pages/index/activity' },
   ],
   // ssr: {},
   // exportStatic: {},

@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import type { ReactText } from 'react';
-import { Row, Col, Carousel, List, Progress, Button } from 'antd';
+import { Row, Col, Carousel, List, Space, Typography, Tag } from 'antd';
 import ProList from '@ant-design/pro-list';
-import {
-  BellFilled,
-  StarOutlined,
-  LikeOutlined,
-  MessageOutlined,
-} from '@ant-design/icons';
+import { BellFilled, DollarCircleTwoTone } from '@ant-design/icons';
 import Entry from './entry';
 import Ad from './ad';
 import Pool from './pool';
@@ -24,34 +19,68 @@ const data = [
 
 const dataSource = [
   {
-    title: '语雀的天空',
-    avatar:
+    name: '一种基于区块链技术的人才引进方法',
+    image:
       'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '武汉...科技有限公司|海南大学',
   },
   {
-    title: 'Ant Design',
-    avatar:
+    name: 'Ant Design',
+    image:
       'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
   },
   {
-    title: '蚂蚁金服体验科技',
-    avatar:
+    name: '蚂蚁金服体验科技',
+    image:
       'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
   },
   {
-    title: '语雀的天空1',
-    avatar:
+    name: 'TechUI',
+    image:
       'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
   },
   {
-    title: 'Ant Design2',
-    avatar:
+    name: 'TechUI2',
+    image:
       'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
+  },
+  {
+    name: 'TechUI3',
+    image:
+      'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
+  },
+  {
+    name: 'TechUI221',
+    image:
+      'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
+  },
+  {
+    name: 'TechUI312',
+    image:
+      'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
+  },
+  {
+    name: 'TechUI211',
+    image:
+      'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
+  },
+  {
+    name: 'TechUI23',
+    image:
+      'https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg',
+    desc: '我是一条测试的描述',
   },
 ];
 
 export default () => {
-
   return (
     <div id="content">
       <div id="content-wrap">
@@ -93,58 +122,121 @@ export default () => {
           </Col>
         </Row>
         <Ad></Ad>
-        <Row gutter={[16, 24]}>
-          <Col span={6}>
-            <div className="research-header"></div>
+        <div className="title-wrap">
+          <div className="title">市场动态</div>
+          <span>—— 助力企业科技创新成果转化交易 ——</span>
+        </div>
+        <Row gutter={[8, 8]}>
+          <Col span={12}>
+            <div className="trade-header">
+              <div className="title">近期成交</div>
+              <div className="content">2093 项</div>
+            </div>
           </Col>
-          <Col span={18}>
-            <div className="achievement-list">
-              <ProList<{ title: string }>
-                toolBarRender={() => {
-                  return [
-                    <Button key="3" type="primary">
-                      查看更多
-                    </Button>,
-                  ];
-                }}
+          <Col span={12}>
+            <div className="achievement-header">
+              <div className="title">最新成果</div>
+            </div>
+          </Col>
+          <Col span={12}>
+            <div className="trade-wrap">
+              <ProList<any>
+                className="trade-list"
+                rowKey="name"
+                // headerTitle="基础列表"
+                toolBarRender={false}
+                split
+                dataSource={dataSource}
+                showActions="hover"
                 metas={{
-                  title: {},
+                  title: {
+                    dataIndex: 'name',
+                  },
                   description: {
-                    render: () => {
-                      return 'Ant Design, a design language for background applications, is refined by Ant UED Team';
+                    dataIndex: 'desc',
+                    valueType: 'text',
+                    render: (item) => {
+                      return (
+                        <div className="desc">
+                          <p>买方：{item?.toString().split('|')[0]}</p>
+                          <p>卖方：{item?.toString().split('|')[1]}</p>
+                        </div>
+                      );
                     },
                   },
-                  avatar: {},
+                  subTitle: {
+                    render: () => {
+                      return (
+                        <Space size={0}>
+                          <Tag color="blue">洽谈中</Tag>
+                        </Space>
+                      );
+                    },
+                  },
+                }}
+              />
+            </div>
+          </Col>
+          <Col span={12}>
+            <div className="achievement-wrap">
+              <ProList<any>
+                className="achievement-list"
+                rowKey="name"
+                toolBarRender={false}
+                split
+                dataSource={dataSource}
+                showActions="hover"
+                metas={{
+                  title: {
+                    dataIndex: 'name',
+                  },
+                  description: {
+                    dataIndex: 'desc',
+                    valueType: 'text',
+                    render: (item) => {
+                      return (
+                        <div className="desc">
+                          <p>买方：{item?.toString().split('|')[0]}</p>
+                          <p>卖方：{item?.toString().split('|')[1]}</p>
+                        </div>
+                      );
+                    },
+                  },
+                  subTitle: {
+                    render: () => {
+                      return (
+                        <Space size={0}>
+                          <Tag color="blue">洽谈中</Tag>
+                        </Space>
+                      );
+                    },
+                  },
                   extra: {
                     render: () => (
                       <div
                         style={{
-                          minWidth: 200,
+                          maxWidth: 100,
                           flex: 1,
                           display: 'flex',
+                          flexDirection: 'column',
+                          // alignContent: 'flex-end',
                           justifyContent: 'flex-end',
                         }}
                       >
+                        <DollarCircleTwoTone style={{ fontSize: 50 }} />
                         <div
                           style={{
-                            width: '200px',
+                            textAlign: 'center',
+                            fontSize: 15,
+                            fontWeight: 600,
                           }}
                         >
-                          <div>发布中</div>
-                          <Progress percent={80} />
+                          估价出售
                         </div>
                       </div>
                     ),
                   },
-                  actions: {
-                    render: () => {
-                      return [<a key="init">邀请</a>, '发布'];
-                    },
-                  },
                 }}
-                rowKey="title"
-                headerTitle="支持选中的列表"
-                dataSource={dataSource}
               />
             </div>
           </Col>

@@ -23,6 +23,7 @@
     "@ant-design/icons": "^4.3.0",
     "@ant-design/pro-layout": "^6.5.0",
     "@ant-design/pro-list": "^1.2.14",
+    "@cloudbase/js-sdk": "^1.3.3",
     "@umijs/preset-react": "1.x",
     "antd": "^4.10.0",
     "umi": "^3.3.3"

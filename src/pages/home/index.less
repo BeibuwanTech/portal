@@ -3,9 +3,26 @@
     width: 1200px;
     margin: 0 auto;
 
+    .title-wrap {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 15px;
+
+      .title {
+        font-size: 35px;
+        font-weight: 600;
+      }
+
+      span {
+        font-size: 18px;
+        opacity: 0.6;
+      }
+    }
+
     .news {
       height: 285px;
-      overflow: scroll;      
+      overflow: scroll;
       background-color: #fff;
 
       .news-header {
@@ -52,21 +69,112 @@
       background-repeat: no-repeat;
     }
 
-    .research-header {
-      height: 450px;
+    .trade-header {
+      padding: 20px;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background-size: cover;
-      background-repeat: no-repeat;
-      background: url('~@/assets//images/pool2.png');
+      background: url('~@/assets//images/dynamicgren.png');
+
+      .title {
+        height: 30px;
+        line-height: 30px;
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .content {
+        height: 20px;
+        line-height: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+      }
     }
 
-    .achievement-list {
+    .trade-wrap {
       height: 450px;
-      overflow: scroll;
+      background: #fff;
+      overflow: hidden;
+
+      @keyframes rowup {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+          -webkit-transform: translate3d(0, -450px, 0);
+          transform: translate3d(0, -450px, 0);
+        }
+      }
+
+      .trade-list {
+        -webkit-animation: 30s rowup linear infinite normal;
+        animation: 30s rowup linear infinite normal;
+      }
+
+      .desc {
+        padding-top: 10px;
+
+        p {
+          height: 10px;
+          line-height: 10px;
+        }
+      }
     }
 
-    .requirement-list {
+    .achievement-header {
+      padding: 20px;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-size: cover;
+      background: url('~@/assets//images/dynamicyellow.png');
+
+      .title {
+        height: 30px;
+        line-height: 30px;
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+
+    .achievement-wrap {
       height: 450px;
-      overflow: scroll;
+      background: #fff;
+      overflow: hidden;
+
+      @keyframes rowup {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+          -webkit-transform: translate3d(0, -450px, 0);
+          transform: translate3d(0, -450px, 0);
+        }
+      }
+
+      .achievement-list {
+        -webkit-animation: 30s rowup linear infinite normal;
+        animation: 30s rowup linear infinite normal;
+      }
+
+      .desc {
+        padding-top: 10px;
+
+        p {
+          height: 10px;
+          line-height: 10px;
+        }
+      }
     }
   }
 }

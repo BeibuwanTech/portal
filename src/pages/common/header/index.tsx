@@ -3,7 +3,9 @@ import { Input, Divider } from 'antd';
 import logo from '@/assets/images/logo.png';
 import './index.less';
 
-const Header: React.FC = () => {
+const Header: React.FC<{ title: string; subtitle: string; info?: string }> = (
+  props,
+) => {
   return (
     <div id="header-wrap">
       <div className="header-bar" />
@@ -11,17 +13,21 @@ const Header: React.FC = () => {
         <div className="header-title-logo">
           <img src={logo} />
           <div>
-            <span className="subtitle">国家重点研发计划支持项目</span>
-            <div className="title">北部湾城市群综合科技服务平台</div>
+            <div className="title">{props.title}</div>
+            <span className="subtitle">{props.subtitle}</span>
           </div>
+          {props.info ? (
+            <>
+              <Divider type="vertical" className="divider" />
+              <div className="info">{props.info}</div>
+            </>
+          ) : null}
         </div>
         <div className="header-search">
           <div className="header-menu">
-            <a href="/html/ljbpt/" target="_blank">
-              产业子平台介绍
-            </a>
+            <a href="/">综合科技服务平台</a>
             <Divider type="vertical" />
-            <a href="http://gjzwfw.www.gov.cn/index.html" target="_blank">
+            <a href="/digital" target="_blank">
               电子信息
             </a>
             <Divider type="vertical" />
