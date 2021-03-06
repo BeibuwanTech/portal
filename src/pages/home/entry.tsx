@@ -11,16 +11,18 @@ const Entry: React.FC = () => {
       </div>
       <Row gutter={[16, 24]}>
         <Col span={4}>
-          <div className="app-entry first">
-            <div className="title">成果转化</div>
-            <span>
-              研发成果资源 <b>20.5万</b> 项
-            </span>
-          </div>
+          <a href="http://std.beibuwan.tech">
+            <div className="app-entry first">
+              <div className="title">标准快速查询</div>
+              <span>
+                国家标准全文 <b>1345</b> 项
+              </span>
+            </div>
+          </a>
         </Col>
         <Col span={4}>
           <div className="app-entry second">
-            <div className="title">成果转化</div>
+            <div className="title">科技服务应用</div>
             <span>
               研发成果资源 <b>20.5万</b> 项
             </span>
@@ -28,7 +30,7 @@ const Entry: React.FC = () => {
         </Col>
         <Col span={4}>
           <div className="app-entry third">
-            <div className="title">成果转化</div>
+            <div className="title">科技服务应用</div>
             <span>
               研发成果资源 <b>20.5万</b> 项
             </span>
@@ -36,7 +38,7 @@ const Entry: React.FC = () => {
         </Col>
         <Col span={4}>
           <div className="app-entry forth">
-            <div className="title">成果转化</div>
+            <div className="title">科技服务应用</div>
             <span>
               研发成果资源 <b>20.5万</b> 项
             </span>
@@ -44,7 +46,7 @@ const Entry: React.FC = () => {
         </Col>
         <Col span={4}>
           <div className="app-entry fifth">
-            <div className="title">成果转化</div>
+            <div className="title">科技服务应用</div>
             <span>
               研发成果资源 <b>20.5万</b> 项
             </span>
@@ -52,7 +54,7 @@ const Entry: React.FC = () => {
         </Col>
         <Col span={4}>
           <div className="app-entry sixth">
-            <div className="title">成果转化</div>
+            <div className="title">科技服务应用</div>
             <span>
               研发成果资源 <b>20.5万</b> 项
             </span>
@@ -60,7 +62,7 @@ const Entry: React.FC = () => {
         </Col>
         <Col span={4}>
           <div className="app-entry fifth">
-            <div className="title">成果转化</div>
+            <div className="title">科技服务应用</div>
             <span>
               研发成果资源 <b>20.5万</b> 项
             </span>
@@ -68,7 +70,7 @@ const Entry: React.FC = () => {
         </Col>
         <Col span={4}>
           <div className="app-entry sixth">
-            <div className="title">成果转化</div>
+            <div className="title">科技服务应用</div>
             <span>
               研发成果资源 <b>20.5万</b> 项
             </span>

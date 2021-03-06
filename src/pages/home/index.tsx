@@ -4,7 +4,6 @@ import { Row, Col, Carousel, List, Space, Typography, Tag } from 'antd';
 import ProList from '@ant-design/pro-list';
 import { BellFilled, DollarCircleTwoTone } from '@ant-design/icons';
 import Entry from './entry';
-import Ad from './ad';
 import Pool from './pool';
 import './index.less';
 
@@ -121,7 +120,6 @@ export default () => {
             </Carousel>
           </Col>
         </Row>
-        <Ad></Ad>
         <div className="title-wrap">
           <div className="title">市场动态</div>
           <span>—— 助力企业科技创新成果转化交易 ——</span>
