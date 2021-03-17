@@ -21,12 +21,14 @@ const Entry: React.FC = () => {
           </a>
         </Col>
         <Col span={4}>
-          <div className="app-entry second">
-            <div className="title">科技服务应用</div>
-            <span>
-              研发成果资源 <b>20.5万</b> 项
-            </span>
-          </div>
+          <a href="http://community.beibuwan.tech" target="_blank">
+            <div className="app-entry second">
+              <div className="title">科技服务社区</div>
+              <span>
+                科技研讨主题 <b>10.5万</b> 个
+              </span>
+            </div>
+          </a>
         </Col>
         <Col span={4}>
           <div className="app-entry third">

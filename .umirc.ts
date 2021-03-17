@@ -11,5 +11,5 @@ export default defineConfig({
     { path: '/activity', component: '@/pages/index/activity' },
   ],
   // ssr: {},
-  // exportStatic: {},
+  exportStatic: {},
 });

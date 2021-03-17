@@ -11,7 +11,7 @@
       }
     },
     "plugins": {
-      "official": {
+      "portal": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
           "outputPath": "./dist",

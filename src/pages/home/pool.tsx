@@ -1,28 +1,28 @@
 import React from 'react';
-import cloudbase from '@cloudbase/js-sdk';
+// import cloudbase from '@cloudbase/js-sdk';
 import './pool.less';
 
-const app = cloudbase.init({
-  env: 'resource-pool-2g92x6b34588bb7d',
-});
-const auth = app.auth({
-  persistence: 'none',
-});
-auth.signInWithUsernameAndPassword('beibuwan', 'beibuwan@2020').then(() => {
-  console.log('用户名密码登录成功'); // 用户名密码登录成功
-  const filter = {};
-  const db = app.database();
-  const RegExp_filter = {
-    Applicant: db.RegExp({
-      regexp: '海南现代科技集团有限公司', // 正则表达式为 /^\ds/，转义后变成 '^\\ds'
-      options: 'ig', // i表示忽略大小写
-    }),
-  };
-  const collection = db.collection('Brand');
-  collection.count().then((res) => {
-    console.log(res);
-  });
-});
+// const app = cloudbase.init({
+//   env: 'resource-pool-2g92x6b34588bb7d',
+// });
+// const auth = app.auth({
+//   persistence: 'none',
+// });
+// auth.signInWithUsernameAndPassword('beibuwan', 'beibuwan@2020').then(() => {
+//   console.log('用户名密码登录成功'); // 用户名密码登录成功
+//   const filter = {};
+//   const db = app.database();
+//   const RegExp_filter = {
+//     Applicant: db.RegExp({
+//       regexp: '海南现代科技集团有限公司', // 正则表达式为 /^\ds/，转义后变成 '^\\ds'
+//       options: 'ig', // i表示忽略大小写
+//     }),
+//   };
+//   const collection = db.collection('Brand');
+//   collection.count().then((res) => {
+//     console.log(res);
+//   });
+// });
 
 export default () => {
   return (
