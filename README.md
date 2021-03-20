@@ -1,15 +1,1 @@
-# umi project
-
-## Getting Started
-
-Install dependencies,
-
-```bash
-$ yarn
-```
-
-Start the dev server,
-
-```bash
-$ yarn start
-```
+# 北部湾城市群综合科技服务平台门户小程序
